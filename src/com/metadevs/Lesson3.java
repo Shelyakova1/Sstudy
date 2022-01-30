@@ -1,4 +1,4 @@
-package com.company;
+package com.metadevs;
 
 public class Lesson3 {
 
