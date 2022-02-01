@@ -1,10 +1,8 @@
 package com.metadevs;
 
 public class Lesson3 {
-
     public static void main(String[] arg) {
         int num = 0;
-        int mum = 1;
         switch (num) {
             case 1:
                 System.out.println("число равно 1");
@@ -35,6 +33,7 @@ public class Lesson3 {
             System.out.println("число не равно ни 1, ни 0,");
         }
     }
+
 
     public static void loops() {
         int counter = 1;
