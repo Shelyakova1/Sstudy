@@ -26,9 +26,8 @@ public class Lesson3 {
     public static void comparisonsOperators(int num) {
         if (num != 8 && num != 1 && num != 9) {
             System.out.println("число не равно 1, 8, 9");
-        } else if ((num == 8 || num == 1 || num == 9)) {
-            System.out.println("число равно или 1 или 8 или 9");
-        }
+        } else System.out.println("число равно 1 или 8 или 9");
+
 
         if (num == 0 || num == 1) {
             System.out.println("число равно 1 или 0");
