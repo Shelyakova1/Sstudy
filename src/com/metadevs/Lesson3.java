@@ -33,7 +33,6 @@ public class Lesson3 {
         }
     }
 
-
     public static void loops() {
         int counter = 1;
         while (counter < 100) {
@@ -49,5 +48,3 @@ public class Lesson3 {
         }
     }
 }
-
-
