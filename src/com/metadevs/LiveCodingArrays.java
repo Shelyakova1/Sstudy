@@ -4,13 +4,13 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class LiveCodingArrays {
-    final static int fullingArray = 1;
-    final static int printArray = 2;
-    final static int changeEl = 3;
-    final static int deliteEl = 4;
-    final static int addEl = 5;
-    final static int fullForOne = 6;
-    final static int exit = 7;
+    final static int FILLING_ARRAY = 1;
+    final static int PRINT_ARRAY = 2;
+    final static int CHANGE_ELEMENT = 3;
+    final static int DELITE_ELEMENT = 4;
+    final static int ADD_ELEMENT = 5;
+    final static int FILL_FOR_ONE = 6;
+    final static int EXIT = 7;
 
     static boolean exitProg = false;
     static Scanner scanAll = new Scanner(System.in);
@@ -24,7 +24,8 @@ public class LiveCodingArrays {
         }
     }
 
-    public static void arrayFulling(int[] array) {
+
+    public static void arrayFilling(int[] array) {
         System.out.println("Введите элементы.");
         for (int i = 0; i < array.length; i++) {
             userInputCheck();
@@ -37,20 +38,20 @@ public class LiveCodingArrays {
 
     }
 
-    public static void changeElOfArray() {
+    public static void changeElementOfArray() {
         System.out.println("Выберите элемент массива который хотите изменить.Нумерация приводинся с 0 до 2.");
         userInputCheck();
-        int indexForChange = scanAll.nextInt();
+        int indexForChange = readIndex();
         System.out.println("Введите новое число.");
         userInputCheck();
         array[indexForChange] = scanAll.nextInt();
         arrayPrint();
     }
 
-    public static void deleteOneEl() {
+    public static void deleteOneElement() {
         System.out.println("Введите индекс элемениа который хотите удалить.");
         userInputCheck();
-        int indexForDelete = scanAll.nextInt();
+        int indexForDelete = readIndex();
         int[] arrayCopyDel = new int[array.length - 1];
         for (int i = 0, j = 0; i < arrayCopyDel.length; i++, j++) {
             if (!(i == indexForDelete)) {
@@ -64,10 +65,10 @@ public class LiveCodingArrays {
         arrayPrint();
     }
 
-    public static void addEl() {
-        System.out.println("Введите индекс элемениа который хотите добавить.");
+    public static void addElement() {
+        System.out.println("Введите индекс элемента который хотите добавить.");
         userInputCheck();
-        int indexForAdd = scanAll.nextInt();
+        int indexForAdd = readIndex();
         System.out.println("Введите число.");
         userInputCheck();
         int elForAdd = scanAll.nextInt();
@@ -84,7 +85,7 @@ public class LiveCodingArrays {
         arrayPrint();
     }
 
-    public static void fullOneNum() {
+    public static void fillOneNum() {
         System.out.println("Введите число которым заполнятся все элементы массива.");
         userInputCheck();
         int elForFull = scanAll.nextInt();
@@ -108,37 +109,54 @@ public class LiveCodingArrays {
         int comand = scanAll.nextInt();
 
         switch (comand) {
-            case fullingArray:
-                arrayFulling(array);
+            case FILLING_ARRAY:
+                arrayFilling(array);
                 break;
 
-            case printArray:
+            case PRINT_ARRAY:
                 arrayPrint();
                 break;
 
-            case changeEl:
-                changeElOfArray();
+            case CHANGE_ELEMENT:
+                changeElementOfArray();
                 break;
 
-            case deliteEl:
-                deleteOneEl();
+            case DELITE_ELEMENT:
+                deleteOneElement();
                 break;
 
-            case addEl:
-                addEl();
+            case ADD_ELEMENT:
+                addElement();
                 break;
 
-            case fullForOne:
-                fullOneNum();
+            case FILL_FOR_ONE:
+                fillOneNum();
                 break;
 
-            case exit:
+            case EXIT:
                 exitProg = true;
                 break;
 
             default:
                 System.out.println("Неверный ввод.");
         }
+    }
+
+    public static int readIndex() {
+        boolean correct = false;
+        int index = -1;
+        while (!correct)
+        {
+            userInputCheck();
+            index = scanAll.nextInt();
+            if (index < 0 || index >= array.length) {
+                System.out.println("Неверный ввод.Введите индекс элемента от 0 до 2.");
+            }
+            else {
+                correct = true;
+            }
+        }
+        return index;
     }
 
     public static void userInputCheck() {
