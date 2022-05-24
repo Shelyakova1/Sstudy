@@ -1,6 +1,6 @@
 package com.metadevs;
 
-public class Person {
+public class Person implements Worker {
     private String name;
     private int age;
     private int salary;
@@ -48,5 +48,27 @@ public class Person {
         boolean statement = salary >= age;
         System.out.println(statement);
         return statement;
+    }
+
+    @Override
+    public void coolerTalk() {
+        System.out.println("Сплетничает.");
+    }
+
+    @Override
+    public void smoking() {
+        System.out.println("Стреляет сиги.");
+    }
+
+
+
+    @Override
+    public void toGetVacation() {
+        System.out.println("Постоянно берет отгулы по понедельникам.");
+    }
+
+    @Override
+    public void toGetLunchBreak() {
+        System.out.println("Обедает в кофейне напротив офиса.");
     }
 }

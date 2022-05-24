@@ -6,11 +6,16 @@ public class Company {
     private String name;
     private ArrayList <Person> persons;
 
+    public Company(String рога_и_копыта) {
+    }
+
+
+
     public String getName() {
         return name;
     }
 
-    public Company(String name) {
+    public void Company(String name) {
         this.name = name;
         persons = new ArrayList<Person>();
     }
