@@ -1,5 +1,3 @@
-package com.metadevs;
-
 import java.util.Scanner;
 
 public class Task1 {
