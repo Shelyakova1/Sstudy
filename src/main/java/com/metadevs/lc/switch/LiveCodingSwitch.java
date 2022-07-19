@@ -1,4 +1,4 @@
-package com.metadevs;
+s
 import java.util.Scanner;
 
 public class LiveCodingSwitch {
