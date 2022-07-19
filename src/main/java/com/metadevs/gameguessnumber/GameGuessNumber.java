@@ -1,4 +1,4 @@
-package com.metadevs;
+package com.metadevs.gameguessnumber;
 
 import java.util.Random;
 import java.util.Scanner;
