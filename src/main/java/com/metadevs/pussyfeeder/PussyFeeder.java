@@ -1,4 +1,4 @@
-package com.metadevs;
+package com.metadevs.pussyfeeder;
 import java.util.Scanner;
 
 public class PussyFeeder {
