@@ -1,4 +1,4 @@
-package com.metadevs;
+package com.metadevs.LC.compress;
 
 import com.sun.org.apache.bcel.internal.generic.ARETURN;
 
