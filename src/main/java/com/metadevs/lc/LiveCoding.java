@@ -1,4 +1,4 @@
-package com.metadevs;
+package com.metadevs.lc;
 
 import java.util.Scanner;
 
