@@ -1,4 +1,4 @@
-package com.metadevs;
+package com.metadevs.lc.arrays;
 
 import java.util.Arrays;
 import java.util.Scanner;
