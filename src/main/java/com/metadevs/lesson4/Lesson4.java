@@ -1,4 +1,4 @@
-package com.metadevs;
+package com.metadevs.lesson4;
 
 public class Lesson4 {
 
