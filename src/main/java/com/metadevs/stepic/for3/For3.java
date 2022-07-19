@@ -1,4 +1,4 @@
-package com.metadevs;
+package com.metadevs.stepic.for3;
 
 import java.util.Scanner;
 

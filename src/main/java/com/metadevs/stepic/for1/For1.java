@@ -1,4 +1,4 @@
-package com.metadevs;
+package com.metadevs.stepic.for1;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
