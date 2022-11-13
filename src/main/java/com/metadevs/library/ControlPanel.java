@@ -1,7 +1,13 @@
 package com.metadevs.library;
 
+import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Этот класс отвечает за :
+ * 1.Ввод-Вывод данных
+ * 2.Реализует управление данными класса Library через Menu.
+ */
 public class ControlPanel {
     private Scanner scanCons;
     private Library library;
@@ -27,19 +33,32 @@ public class ControlPanel {
     }
 
     private void takeBook(){
-        //считывает BID RID  с консоли и вызвать library.takeBook
+        System.out.println("Enter RID and BID");
+        int RID = scanCons.nextInt();
+        int BID = scanCons.nextInt();
     }
+    private  boolean CheckBookExists(int BID){
+        Book book = null;
+        return  false;
+    }
+
     private void returnBook(){
         //считывает BID RID  с консоли и вызвать library.returnBook
 
     }
 
-    private void printBooks(){
-        library.printBooks();
+    public void printBooks(){
+        List<Book> books =library.getBooks();
+        for (int i = 0; i < books.size() ; i++) {
+            System.out.println(books.get(i).toString());
+        }
     }
+    public void printReaders(){
+        List<Reader> readers = library.getReaders();
+        for (int i = 0; i < readers.size(); i++) {
+            System.out.println(readers.get(i).toString());
 
-    private void printReaders(){
-        library.printReaders();
+        }
     }
 
 }

@@ -1,14 +1,22 @@
 package com.metadevs.library;
 
-public class Book {
-    private  int id;
+public abstract class Book {
+    private  int BID;
+    private  String Name;
+    private  String Author;
+    private  int year;
 
-    public Book(int id) {
+    public Book(int BID, String Name, String Author, int year) {
 
-        this.id = id;
+        this.BID = BID;
+        this.Name = Name;
+        this. Author = Author;
+        this.year = year;
+
+
     }
 
     public String toString(){
-    return " " + id;
+    return "BID: " + BID + ", Name"+ Name + ", Author " + Author + ", year "+ year   ;
 }
 }
