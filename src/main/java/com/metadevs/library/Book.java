@@ -16,7 +16,11 @@ public abstract class Book {
 
     }
 
+    public int getBID() {
+        return BID;
+    }
+
     public String toString(){
-    return "BID: " + BID + ", Name"+ Name + ", Author " + Author + ", year "+ year   ;
+    return "BID: " + BID + ", Name "+ Name + ", Author " + Author + ", year "+ year   ;
 }
 }
